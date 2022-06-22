@@ -70,10 +70,14 @@ a.links:first-of-type {
 }
 
 .midright {
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    justify-items: end;
     font-family: arial,sans-serif;
     line-height: normal;
     padding-right: 15px;
-    display: block;
+  
 }
 
 .upright {
