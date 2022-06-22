@@ -6,6 +6,10 @@ const poney = require('./poney_database')
 
 const cars = require('./cars_database')
 
+const arr = poney.concat(cars);
+
+console.log(arr);
+
 
 app.use(express.json())
 app.use(cors())
@@ -13,6 +17,7 @@ app.use(cors())
 
 app.get('/search', (req, res) => {
     res.send(poney)
+    // console.log(poney)
 })
 
 app.get('/cars', (req, res) => {
@@ -20,9 +25,9 @@ app.get('/cars', (req, res) => {
 })
 
 function getRandomItem() {
-    let rand = Math.floor(Math.random() * data.length + 1)
-    console.log(rand);
-    return data[rand];
+    let rand = Math.floor(Math.random() * arr.length + 1)
+    console.log(arr);
+    return arr[rand];
   }
 
 app.get('/search/random', (req, res) => {
