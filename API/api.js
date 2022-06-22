@@ -2,14 +2,21 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const data = require('./database')
+const poney = require('./poney_database')
+
+const cars = require('./cars_database')
+
 
 app.use(express.json())
 app.use(cors())
 
 
 app.get('/search', (req, res) => {
-    res.send(data)
+    res.send(poney)
+})
+
+app.get('/cars', (req, res) => {
+    res.send(cars)
 })
 
 
