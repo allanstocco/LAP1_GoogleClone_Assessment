@@ -44,10 +44,6 @@ function appendResult(itemData){
 
 }
 
-function getRandomResult(e) {
-    e.preventDefault();
-}
-
 fetchData(query)
 
 
