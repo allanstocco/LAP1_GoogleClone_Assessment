@@ -1,8 +1,12 @@
-const searchResultArea = document.querySelector('#searchresultsarea');
-console.log(searchResultArea)
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const query = urlParams.get('q')
 
-async function fetchData() {
-    let response = await fetch('http://0.0.0.0:3000/search');
+const searchResultArea = document.querySelector('#searchresultsarea');
+
+
+async function fetchData(query) {
+    let response = await fetch(`http://0.0.0.0:3000/${query}`);
     let data = await response.json();
     console.log(data);
     appendResults(data);
@@ -16,7 +20,7 @@ function appendResult(itemData) {
 
     searchResultArea.innerHTML += `
         <div class="searchresult">
-            <a href="${itemData.url}">${itemData.url} <button style="font-size:20px;">&#8595</button>
+            <a href="${itemData.url}">${itemData.url} 
                 <h2>Lock ${itemData.header}</h2>
             </a> 
             
@@ -30,7 +34,7 @@ function getRandomResult(e) {
     e.preventDefault();
 }
 
-fetchData()
+fetchData(query)
 
 
 exports = {
