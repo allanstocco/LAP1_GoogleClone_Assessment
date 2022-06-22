@@ -135,6 +135,11 @@ html, body {
     font-family: 'Arial';
 }
 
+#relatedsearches-pagebar {
+    margin-left: 150px;
+    font-family: 'Arial';
+}
+
 #searchresultsnumber {
     font-size: 0.8rem;
     color: gray;

@@ -11,18 +11,27 @@ function appendResults(data){
 
 function appendResult(itemData){
 
+    // console.log(itemData.header);
     const searchResultArea = document.querySelector('#searchresultsarea');
-
+    console.log(searchResultArea);
     const container = document.createElement('div');
     const header = document.createElement('h2');
     const link = document.createElement('a');
     const text = document.createElement('p');
     container.setAttribute('class', 'searchresult');
-    container.setAttribute('id', `searchresult-${itemData.id + 1}`)
+    // container.setAttribute('id', `searchresult-${parseInt(itemData[0] + 1)}`)
+
+    header.textContent = itemData.header;
+    link.textContent = itemData.url;
+    text.textContent = itemData.info;
+
+    // console.log(header, link, text);
 
     container.appendChild(header);
     container.appendChild(link);
     container.appendChild(text);
+
+    console.log(container);
 
     searchResultArea.append(container);
 
