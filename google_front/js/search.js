@@ -24,14 +24,18 @@ function appendResult(itemData){
     const container = document.createElement('div');
     const header = document.createElement('h2');
     const link = document.createElement('a');
+    const headerLink = document.createElement('a');
     const text = document.createElement('p');
     container.setAttribute('class', 'searchresult');
     // container.setAttribute('id', `searchresult-${parseInt(itemData[0] + 1)}`)
 
-    header.textContent = itemData.header;
     link.textContent = itemData.url;
     link.href = itemData.url;
     text.textContent = itemData.info;
+
+    headerLink.href = itemData.url;
+    headerLink.textContent = itemData.header;
+    header.appendChild(headerLink);
 
 
 
