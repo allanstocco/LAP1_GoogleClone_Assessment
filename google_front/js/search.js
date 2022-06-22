@@ -30,7 +30,10 @@ function appendResult(itemData){
 
     header.textContent = itemData.header;
     link.textContent = itemData.url;
+    link.href = itemData.url;
     text.textContent = itemData.info;
+
+
 
     // console.log(header, link, text);
 
