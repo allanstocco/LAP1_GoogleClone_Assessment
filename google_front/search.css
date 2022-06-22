@@ -98,7 +98,7 @@ html, body {
 #boxesicon {
     width: 25px;
     height: 25px;
-    background-image: url('images/boxes.png');
+    background-image: url('');
     opacity: 0.6;
     background-size: 26px;
     position: absolute;
@@ -174,7 +174,7 @@ html, body {
     width: 20px;
     height: 20px;
     background-color: rgb(105, 105, 105);
-    background-image: url('images/bell.png');
+    background-image: url('');
     background-size: 12px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -290,7 +290,7 @@ html, body {
     top: -35px;
     width: 40px;
     height: 40px;
-    background-image: url('images/g.png');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: 28px;
 }
@@ -368,7 +368,7 @@ html, body {
     top: -37px;
     width: 50px;
     height: 50px;
-    background-image: url('images/gle.png');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: 48px;
 }

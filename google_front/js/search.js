@@ -1,8 +1,8 @@
 async function fetchData(){
-    let response = await fetch('http://localhost:3000/search');
+    let response = await fetch('http://0.0.0.0:3000/search');
     let data = await response.json();
     console.log(data);
-    appendResult(data);
+    appendResults(data);
 }
 
 function appendResults(data){
@@ -11,9 +11,7 @@ function appendResults(data){
 
 function appendResult(itemData){
 
-    // document.location.href = 'search.html'; 
     const searchResultArea = document.querySelector('#searchresultsarea');
-    // console.log(searchResultArea);
 
     const container = document.createElement('div');
     const header = document.createElement('h2');
@@ -27,17 +25,17 @@ function appendResult(itemData){
     container.appendChild(text);
 
     searchResultArea.append(container);
-    // console.log(container);
 
-    
 }
 
 function getRandomResult(e){
     e.preventDefault();
-    console.log('testing')
 }
 
-module.exports = {
+fetchData()
+
+
+exports = {
     fetchData,
     appendResults,
     appendResult
