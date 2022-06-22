@@ -328,7 +328,7 @@ a.links:first-of-type {
 }
 
 
-.search-button {
+.buttom {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
@@ -345,7 +345,7 @@ a.links:first-of-type {
     user-select: none;
 }
 
-.random-button {
+.buttom2 {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
