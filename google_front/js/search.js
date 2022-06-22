@@ -1,11 +1,18 @@
-async function fetchData(){
-    let response = await fetch('http://0.0.0.0:3000/search');
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const query = urlParams.get('q')
+
+const searchResultArea = document.querySelector('#searchresultsarea');
+
+
+async function fetchData(query) {
+    let response = await fetch(`http://0.0.0.0:3000/${query}`);
     let data = await response.json();
     console.log(data);
     appendResults(data);
 }
 
-function appendResults(data){
+function appendResults(data) {
     data.forEach(appendResult)
 }
 
@@ -37,11 +44,11 @@ function appendResult(itemData){
 
 }
 
-function getRandomResult(e){
+function getRandomResult(e) {
     e.preventDefault();
 }
 
-fetchData()
+fetchData(query)
 
 
 exports = {

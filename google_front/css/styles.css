@@ -70,10 +70,14 @@ a.links:first-of-type {
 }
 
 .midright {
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    justify-items: end;
     font-family: arial,sans-serif;
     line-height: normal;
     padding-right: 15px;
-    display: block;
+  
 }
 
 .upright {
@@ -330,7 +334,7 @@ a.links:first-of-type {
 
 .search-button {
     background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    border: none;
     border-radius: 4px;
     color: #3c4043;
     font-family: arial,sans-serif;
@@ -347,7 +351,7 @@ a.links:first-of-type {
 
 .random-button {
     background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    border: none;
     border-radius: 4px;
     color: #3c4043;
     font-family: arial,sans-serif;

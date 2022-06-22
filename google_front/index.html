@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script defer src="./js/index.js"></script>
     <script defer src="./js/search.js"></script>
 </head>
@@ -20,10 +20,18 @@
                 <div class="mid">
                     <div class="midright">
                         <div class="upright">
-                            <a class="textright" href="g_img.html">Image Search</a>
+                            <a class="textright" href="g_img.html"></a>
                         </div>
+                        <div id="changeMode" class="upright">Change Dark</div>
                         <div class="upright">
-                            <a class="textright" href="g_advsearch.html">Advanced Search</a>
+                            <a aria-label="Google apps" href="https://www.google.co.uk/intl/en/about/products"
+                                aria-expanded="false" role="button" tabindex="0">
+                                <svg id="svg" focusable="false" viewBox="0 0 24 24" width="30px" heigth="30px">
+                                    <path
+                                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                                    </path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +47,7 @@
             </div>
         </div>
         <div class="field">
-            <form>
+            <form action="./search.html">
                 <div style="display: block;">
                     <div class="field_A">
                         <div class="field_Aa">
@@ -56,7 +64,7 @@
                                 </div>
                                 <div clas="field_B">
                                     <div class="field_Bb"></div>
-                                    <input class="field_Bc" type="text" name="q" maxlenght="1000">
+                                    <input id="query" class="field_Bc" name="q" type="text" maxlenght="1000">
                                 </div>
                             </div>
                         </div>
@@ -64,10 +72,10 @@
                     <div class="field_mid" style="display: none;"></div>
                     <div class="field_but" style="display: block;">
                         <center>
-                            <input name="btnK" class="search-button" value="Google Search" aria-label="Google Search"
+                            <input id="submit_query" class="search-button" value="Google Search" aria-label="Google Search"
                                 type="submit">
-                            <input name="btnI" class="random-button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky"
-                                type="submit">
+                            <input name="btnI" class="random-button" value="I'm Feeling Lucky"
+                                aria-label="I'm Feeling Lucky" type="submit">
                         </center>
                     </div>
                 </div>
@@ -75,13 +83,7 @@
         </div>
         <div class="lower-mid">
             <div class="lower-midA">
-                <div class="lower-textmid">
-                    Google offered in:
-                    <a style="color: #1a0dab;
-                    text-decoration: none; padding: 0 3px;"
-                        href="https://www.google.com/setprefs?sig=0_QQYD4-VDEo1p015VWpYCq4CX6SE%3D&amp;hl=pt-PT&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwivp-WQ9pbyAhUBiFwKHUPTCSUQ2ZgBCBE">Português
-                        (Portugal)</a>
-                </div>
+                <div class="lower-textmid"></div>
             </div>
         </div>
         <div class="upperFooter">
@@ -109,7 +111,7 @@
         </div>
 
 
-
+        <script src="./js/styles.js"></script>
 </body>
 
 </html>

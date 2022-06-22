@@ -147,7 +147,9 @@ html, body {
 
 .searchresult {
     margin-left: 8px;
+    margin-bottom: 3rem;
 }
+
 
 .searchresult h2 {
     font-size: 19px;
@@ -155,11 +157,12 @@ html, body {
     font-weight: normal;
     color: rgb(29, 1, 189);
     margin-bottom: 0px;
-    margin-top: 25px;
+    
 }
 
 .searchresult a {
     font-size: 14px;
+    text-decoration: none;
     line-height: 14px;
     color: green;
     margin-bottom: 0px;
@@ -168,7 +171,8 @@ html, body {
 .searchresult button {
     font-size: 10px;
     line-height: 14px;
-    color: green;
+    font-weight: bolder;
+    color: black;
     margin-bottom: 0px;
     padding: 0px;
     border-width: 0px;
@@ -238,6 +242,10 @@ html, body {
     font-size: 13px;
     margin-top: 0px;
     color: rgb(82, 82, 82);
+}
+
+.relatedsearches {
+    margin-left: 150px;
 }
 
 .relatedsearches h3 {
@@ -381,7 +389,7 @@ html, body {
 
 #footer {
     background-color: rgb(238, 238, 238);
-    position: relative;
+    position: fixed;
     left: 0px;
     bottom: 0px;
     width: 100%;
@@ -414,4 +422,8 @@ html, body {
 
 #footerlocation p:nth-of-type(1) {
     font-weight: bold;
+}
+
+#optionsmenu1 li {
+    cursor: pointer;
 }
