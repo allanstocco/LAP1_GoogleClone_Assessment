@@ -14,7 +14,7 @@ changeMode.addEventListener('click', (e) => {
     if (changeMode.textContent == 'Change Dark') {
 
         changeMode.textContent = 'Change Light'
-        logoTheme.src = '../images/google_logo_dark.png'
+        logoTheme.src = '/Users/vincent/Desktop/Futureproof/Week3/week3 lap 1 assignment/LAP1_GoogleClone_Assessment/google_front/images/google_logo_dark.png'
         themeColor.style.backgroundColor = '#202124'
         themeColor.style.color = 'whitesmoke'
         footerDiv.style.color = 'whitesmoke'
