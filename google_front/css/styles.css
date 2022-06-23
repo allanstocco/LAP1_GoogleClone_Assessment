@@ -1,10 +1,13 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-body, input, button {
+body,
+input,
+button {
     font-size: 14px;
     font-family: arial, sans-serif;
     color: #222;
@@ -28,8 +31,9 @@ a.links {
     display: inline-block;
     padding: 5px;
     margin: 0 5px;
-    color:#222;
+    color: #222;
 }
+
 a.links:first-of-type {
     margin-left: 15px;
 }
@@ -71,13 +75,13 @@ a.links:first-of-type {
 
 .midright {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: end;
     justify-items: end;
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     line-height: normal;
     padding-right: 15px;
-  
+
 }
 
 .upright {
@@ -92,7 +96,7 @@ a.links:first-of-type {
     display: inline-block;
     line-height: 24px;
     vertical-align: middle;
-    color: rgba(0,0,0,0.87);
+    color: rgba(0, 0, 0, 0.87);
 }
 
 /*------------------GOOGLE LOGO-------------------*/
@@ -135,7 +139,7 @@ a.links:first-of-type {
     position: relative;
     top: 100px;
     max-height: 100%;
-    max-width:100%;
+    max-width: 100%;
     object-fit: contain;
     object-position: center bottom;
     width: auto;
@@ -161,10 +165,10 @@ a.links:first-of-type {
 .Tg7LZd {
     background: transparent;
     border: none;
-    cursor: pointer;   
-    color: #4285f4; 
+    cursor: pointer;
+    color: #4285f4;
     fill: currentColor;
-   }
+}
 
 .z1asCe {
     display: inline-block;
@@ -174,12 +178,12 @@ a.links:first-of-type {
     position: relative;
     background: transparent;
     border: none;
-    cursor: pointer;   
-    color: #4285f4; 
+    cursor: pointer;
+    color: #4285f4;
     fill: currentColor;
     left: 510px;
     width: 25px;
-    
+
 }
 
 .field_itemB-mic {
@@ -230,8 +234,8 @@ a.links:first-of-type {
     margin: 0 auto;
 }
 
-.field_A:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+.field_A:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 .field_Aa {
@@ -302,7 +306,7 @@ a.links:first-of-type {
     margin: -5px;
     margin-left: 10px;
     padding: 0;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
     word-wrap: break-word;
     outline: none;
     display: flex;
@@ -337,7 +341,7 @@ a.links:first-of-type {
     border: none;
     border-radius: 4px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     font-size: 14px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -354,7 +358,7 @@ a.links:first-of-type {
     border: none;
     border-radius: 4px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     font-size: 14px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -383,6 +387,7 @@ a.links:first-of-type {
     text-align: center;
     display: block;
 }
+
 .lower-textmid {
     color: #3c4043;
     display: inline-block;
@@ -405,10 +410,10 @@ a.links:first-of-type {
     padding: 15px 30px;
     border-bottom: 1px solid #dadce0;
     font-size: 15px;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
 }
 
-.footerBox{
+.footerBox {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
@@ -448,5 +453,51 @@ a.footerLinks {
     color: #70757a;
 }
 
+.gTMtLb {
+    display: block;
+    position: absolute;
+    right: 12rem;
+    bottom: 15rem;
+}
 
+.sAKBe {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+}
 
+.B8Kd8d {
+    position: absolute;
+}
+
+.EwsJzb {
+    display: block;
+}
+
+.menu {
+    background-color: #fff;
+    padding: 5px 0;
+    white-space: nowrap;
+    border-radius: 8px;
+    border: none;
+    display: block;
+    outline: none;
+}
+
+#dropup div {
+    margin: auto;
+}
+
+#dropup {
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    font-size: 14px;
+    line-height: 23px;
+    white-space: nowrap;
+
+}
+
+#dropup li:hover {
+   color: whitesmoke;
+   background-color: #9aa0a6;
+}

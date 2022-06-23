@@ -20,7 +20,7 @@ function appendResults(data) {
 }
 
 function appendResult(itemData){
-
+    
     // console.log(itemData.header);
     const searchResultArea = document.querySelector('#searchresultsarea');
     console.log(searchResultArea);
