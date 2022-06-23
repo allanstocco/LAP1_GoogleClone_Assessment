@@ -119,9 +119,36 @@ async function relatedSearches(query) {
     let relatedSearches = document.querySelector('#relatedsearches-header');
     relatedSearches.textContent = `Search results related to ${query}`;
 
-    let response = await fetch(`https://api.bing.com/osjson.aspx?query=${query}`);
+    const options = { 
+        method: 'GET',
+        body: null,
+        headers: {
+        "Content-Type": "text/plain"
+    }
+    };
+    console.log(query)
+    let response = await fetch(`https://api.bing.com/osjson.aspx?query=${query}`, options);
     let data = await response.json();
-    console.log(data[1]);
+    let arr = await data[1];
+    arr.splice(arr.length - 4, 4);
+    console.log(arr);
+
+
+    let leftRelatedSearches = document.querySelector('.relatedleft');
+    let rightRelatedSearches = document.querySelector('.relatedright');
+
+    for(i=0; i <arr.length; i++){
+        console.log(i);
+        if(i<4){
+            let li = document.createElement('li');
+            li.textContent = arr[i];
+            leftRelatedSearches.appendChild(li);
+        } else {
+            let li = document.createElement('li');
+            li.textContent = arr[i];
+            rightRelatedSearches.appendChild(li);
+        }
+    }
 
 }
 
