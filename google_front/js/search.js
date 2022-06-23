@@ -50,6 +50,14 @@ function appendResult(itemData){
 
     searchResultArea.append(container);
 
+    let errorHeader = "Could not find any results for this search"
+    if(headerLink.textContent == errorHeader){
+        let pagebar = document.querySelector('.pagebar');
+        let relatedsearches = document.querySelector('.relatedsearches')
+        headerLink.href = "../google_front/error.html"
+        pagebar.remove();
+        relatedsearches.remove();
+    }
 }
 
 fetchData(query)
