@@ -9,6 +9,27 @@ const footerDiv = document.querySelector('.location');
 const input = document.querySelector('.field_A');
 const svg = document.querySelector('#svg');
 
+
+
+randomButton.addEventListener('mouseover', (e) => {
+
+    const textContentBtn = ["I'm Feeling Lucky", "I'm Feeling Playful", "I'm Feeling Doodley", "I'm Feeling Adventurous", "I'm Feeling Generous", "I'm Feeling Artistic", "I'm Feeling Hungry"]
+
+    const randomInnerText = Math.floor(Math.random() * textContentBtn.length)
+
+    randomButton.value = textContentBtn[randomInnerText]
+
+})
+
+randomButton.addEventListener('mouseout', (e) => {
+    randomButton.value = "I'm Feeling Lucky"
+})
+
+
+
+
+
+
 changeMode.addEventListener('click', (e) => {
 
     if (changeMode.textContent == 'Change Dark') {
@@ -51,5 +72,6 @@ changeMode.addEventListener('click', (e) => {
         }
     }
 
-
 })
+
+
