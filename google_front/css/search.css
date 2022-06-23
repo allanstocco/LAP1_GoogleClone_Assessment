@@ -234,9 +234,19 @@ html, body {
     margin-left: 150px;
 }
 
+#optionsmenu1 li > a {
+   text-decoration: none;
+   color: #707070;
+}
+
 #optionsmenu1 li {
     padding: 0px 10px 15px 20px;
 }
+
+#optionsmenu2 li > a {
+    text-decoration: none;
+    color: #707070;
+ }
 
 #optionsmenuactive {
     color: #4285F4;
