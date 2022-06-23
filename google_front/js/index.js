@@ -10,8 +10,6 @@ const api_id = document.querySelector('#api_id');
 
 
 
-// googleSearch.addEventListener('click', getAllResults);
-
 data_id.addEventListener('click', (e) => {
     database_request.style.display = 'block';
     api_request.style.display = 'none';
@@ -19,6 +17,7 @@ data_id.addEventListener('click', (e) => {
     data_id.style.color = 'whitesmoke';
     api_id.style.backgroundColor = '#fff';
     api_id.style.color = 'black';
+
 })
 
 api_id.addEventListener('click', (e) => {
