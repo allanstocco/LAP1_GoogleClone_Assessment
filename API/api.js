@@ -12,9 +12,10 @@ const arr = poney.concat(cars);
 app.use(express.json())
 app.use(cors())
 
-app.get('/ponei', (req, res) => {
-  res.send(poney)
 
+app.get('/poney', (req, res) => {
+    res.send(poney)
+    
 })
 
 app.get('/cars', (req, res) => {
