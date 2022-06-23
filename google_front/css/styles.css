@@ -489,7 +489,7 @@ a.footerLinks {
 
 #dropup {
     width: 150px;
-    padding-left: 0;
+    padding-left: 1rem;
     padding-right: 1rem;
     text-decoration: none;
     list-style: none;
