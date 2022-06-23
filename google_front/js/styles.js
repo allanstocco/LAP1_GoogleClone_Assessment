@@ -56,7 +56,7 @@ changeMode.addEventListener('click', (e) => {
     if (changeMode.textContent == 'Change Dark') {
 
         changeMode.textContent = 'Change Light'
-        logoTheme.src = '../images/google_logo_dark.png'
+        logoTheme.src = '../google_front/images/google_logo_dark.png'
         themeColor.style.backgroundColor = '#202124'
         themeColor.style.color = 'whitesmoke'
         footerDiv.style.color = 'whitesmoke'
@@ -76,7 +76,7 @@ changeMode.addEventListener('click', (e) => {
     } else {
 
         changeMode.textContent = 'Change Dark'
-        logoTheme.src = '../images/googlelogo_color_272x92dp.png'
+        logoTheme.src = '../google_front/images/googlelogo_color_272x92dp.png'
         themeColor.style.backgroundColor = 'white'
         themeColor.style.color = 'black'
         footerDiv.style.color = '#70757a'
