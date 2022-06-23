@@ -22,7 +22,6 @@ data_id.addEventListener('click', (e) => {
         api_id.style.backgroundColor = '#202124';
         api_id.style.color = 'whitesmoke';
     }
-
 })
 
 api_id.addEventListener('click', (e) => {
@@ -30,7 +29,7 @@ api_id.addEventListener('click', (e) => {
     database_request.style.display = 'none';
     api_id.style.backgroundColor = '#4285f4';
     api_id.style.color = 'whitesmoke';
-    
+
     if (changeModeBtn.textContent == 'Change Dark') {
         data_id.style.backgroundColor = '#fff';
         data_id.style.color = 'black';
@@ -38,8 +37,20 @@ api_id.addEventListener('click', (e) => {
         data_id.style.backgroundColor = '#202124';
         data_id.style.color = 'whitesmoke';
     }
+})
 
-
+changeModeBtn.addEventListener('click', () => {
+    if (changeModeBtn.textContent == 'Change Dark') {
+        data_id.style.backgroundColor = '#fff';
+        data_id.style.color = 'black';
+        api_id.style.backgroundColor = '#fff';
+        api_id.style.color = 'black';
+    } else {
+        data_id.style.backgroundColor = '#202124';
+        data_id.style.color = 'whitesmoke';
+        api_id.style.backgroundColor = '#202124';
+        api_id.style.color = 'whitesmoke';
+    }
 })
 
 

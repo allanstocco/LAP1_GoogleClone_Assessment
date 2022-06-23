@@ -9,8 +9,7 @@ const footerDiv = document.querySelector('.location');
 const input = document.querySelector('.field_A');
 const settingBox = document.querySelector('.menu');
 const svg = document.querySelector('#svg');
-const dropup = document.querySelector('#dropup')
-
+const dropup = document.querySelector('#dropup');
 const settingsLinkDropUp = document.querySelector('#settingDropUp');
 const settingsDropUp = document.querySelector('.gTMtLb')
 
@@ -75,11 +74,6 @@ changeMode.addEventListener('click', (e) => {
             allDivs[i].style.color = 'whitesmoke'
         }
 
-        for (let i = 0; i < dropup.children.length; i++) {
-            dropup.children[i].style.backgroundColor = '#202124'
-            dropup.children[i].style.color = 'whitesmoke'
-        }
-
     } else {
 
         changeMode.textContent = 'Change Dark'
@@ -99,11 +93,6 @@ changeMode.addEventListener('click', (e) => {
 
         for (let i = 0; i < allDivs.length; i++) {
             allDivs[i].style.color = '#70757a'
-        }
-
-        for (let i = 0; i < dropup.children.length; i++) {
-            dropup.children[i].style.backgroundColor = '#fff'
-            dropup.children[i].style.color = 'black'
         }
     }
 
