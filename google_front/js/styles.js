@@ -7,7 +7,28 @@ const logoTheme = document.querySelector('#logo_google')
 const footer = document.querySelector('.upperFooter');
 const footerDiv = document.querySelector('.location');
 const input = document.querySelector('.field_A');
+const settingBox = document.querySelector('.menu');
 const svg = document.querySelector('#svg');
+
+const settingsLinkDropUp = document.querySelector('#settingDropUp');
+const settingsDropUp = document.querySelector('.gTMtLb')
+
+
+settingsLinkDropUp.addEventListener('click', (e) => {
+
+    settingsDropUp.style.display = 'block'
+
+})
+
+document.addEventListener('click', (e) => {
+    if (e.path[0].className == 'lower-mid' || e.path[0].className == 'logo') {
+    settingsDropUp.style.display = 'none'
+    }
+})
+
+
+
+
 
 
 
@@ -35,7 +56,7 @@ changeMode.addEventListener('click', (e) => {
     if (changeMode.textContent == 'Change Dark') {
 
         changeMode.textContent = 'Change Light'
-        logoTheme.src = '/Users/vincent/Desktop/Futureproof/Week3/week3 lap 1 assignment/LAP1_GoogleClone_Assessment/google_front/images/google_logo_dark.png'
+        logoTheme.src = '../images/google_logo_dark.png'
         themeColor.style.backgroundColor = '#202124'
         themeColor.style.color = 'whitesmoke'
         footerDiv.style.color = 'whitesmoke'
@@ -46,6 +67,7 @@ changeMode.addEventListener('click', (e) => {
         footerDiv.style.borderBottom = '1px solid #212327'
         footer.style.backgroundColor = '#181818'
         input.style.background = '#202124'
+        settingBox.style.background = '#202124'
         svg.setAttribute('fill', 'white')
 
         for (let i = 0; i < allDivs.length; i++) {
@@ -65,6 +87,7 @@ changeMode.addEventListener('click', (e) => {
         footerDiv.style.borderBottom = '1px solid #dadce0'
         footer.style.backgroundColor = 'white'
         input.style.background = '#fff'
+        settingBox.style.background = '#fff'
         svg.setAttribute('fill', 'black')
 
         for (let i = 0; i < allDivs.length; i++) {

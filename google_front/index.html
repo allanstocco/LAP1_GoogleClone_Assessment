@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/x-icon" href="../google_front/images/pngegg.png">
+    <link rel="icon" type="image/x-icon" href="../images/pngegg.png">
     <script defer src="./js/index.js"></script>
 
 </head>
@@ -23,7 +23,8 @@
                         <div class="upright">
                             <a class="textright" href="g_img.html"></a>
                         </div>
-                        <div id="changeMode" class="upright">Change Dark</div>
+                        <a href="https://mail.google.com/mail/u/0/" class="upright">Gmail</a>
+                        <a href="https://www.google.co.uk/imghp?hl=en&ogbl" class="upright">Images</a>
                         <div class="upright">
                             <a aria-label="Google apps" href="https://www.google.co.uk/intl/en/about/products"
                                 aria-expanded="false" role="button" tabindex="0">
@@ -47,7 +48,42 @@
                 <div class="buttom_logo"></div>
             </div>
         </div>
-        <div class="field">
+        <div id="database_request"  class="field">
+            <form action="./search.html">
+                <div style="display: block;">
+                    <div class="field_A">
+                        <div class="field_Aa">
+                            <div class="field_item">
+                                <div class="field_itemA">
+                                    <div class="field_itemAa">
+                                        <div>
+                                            <img src="images/lupa.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field_itemB">
+                                    <img style="position: relative; left: 510px;" src="images/mic3.png" alt="">
+                                </div>
+                                <div clas="field_B">
+                                    <div class="field_Bb"></div>
+                                    <input id="query" class="field_Bc" name="q" type="text" maxlenght="1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field_mid" style="display: none;"></div>
+                    <div class="field_but" style="display: block;">
+                        <center>
+                            <input id="submit_query" class="search-button" value="Google Search"
+                                aria-label="Google Search" type="submit">
+                            <input name="btnI" class="random-button" id="random-button" value="I'm Feeling Lucky"
+                                aria-label="I'm Feeling Lucky" type="button">
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="api_request" style="display: none;" class="field">
             <form action="./search.html">
                 <div style="display: block;">
                     <div class="field_A">
@@ -106,7 +142,7 @@
                 <div class="box-C footerBox">
                     <a class="footerLinks" href="https://policies.google.com/privacy?hl=en-GB&fg=1">Privacy</a>
                     <a class="footerLinks" href="https://policies.google.com/terms?hl=en-GB&fg=1">Terms</a>
-                    <a class="footerLinks" href="">Settings</a>
+                    <a id="settingDropUp" class="footerLinks" href="#">Settings</a>
                 </div>
             </div>
         </div>
@@ -121,7 +157,7 @@
                         <li>Search history</li>
                         <li>Search help</li>
                         <li>Send feedback</li>
-                        <li id="changeMode">Dark theme: Off</li>
+                        <li id="changeMode">Change Dark</li>
                     </ul>
 
                 </div>
