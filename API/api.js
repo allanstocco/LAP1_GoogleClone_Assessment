@@ -15,9 +15,9 @@ app.use(express.json())
 app.use(cors())
 
 
-app.get('/search', (req, res) => {
+app.get('/poney', (req, res) => {
     res.send(poney)
-    // console.log(poney)
+    
 })
 
 app.get('/cars', (req, res) => {
@@ -26,7 +26,6 @@ app.get('/cars', (req, res) => {
 
 function getRandomItem() {
     let rand = Math.floor(Math.random() * arr.length + 1)
-    console.log(arr);
     return arr[rand];
   }
 

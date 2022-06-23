@@ -8,7 +8,7 @@ const searchResultArea = document.querySelector('#searchresultsarea');
 async function fetchData(query) {
     let response = await fetch(`http://0.0.0.0:3000/${query}`);
     let data = await response.json();
-    console.log(data);
+    console.log(data)
     appendResults(data);
 }
 
