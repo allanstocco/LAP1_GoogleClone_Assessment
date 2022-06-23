@@ -5,8 +5,7 @@ const database_request = document.querySelector('#database_request');
 const api_request = document.querySelector('#api_request');
 const data_id = document.querySelector('#data_id');
 const api_id = document.querySelector('#api_id');
-
-
+const changeModeBtn = document.querySelector('#changeMode');
 
 
 
@@ -15,18 +14,32 @@ data_id.addEventListener('click', (e) => {
     api_request.style.display = 'none';
     data_id.style.backgroundColor = '#4285f4';
     data_id.style.color = 'whitesmoke';
-    api_id.style.backgroundColor = '#fff';
-    api_id.style.color = 'black';
+
+    if (changeModeBtn.textContent == 'Change Dark') {
+        api_id.style.backgroundColor = '#fff';
+        api_id.style.color = 'black';
+    } else {
+        api_id.style.backgroundColor = '#202124';
+        api_id.style.color = 'whitesmoke';
+    }
 
 })
 
 api_id.addEventListener('click', (e) => {
     api_request.style.display = 'block';
     database_request.style.display = 'none';
-    data_id.style.backgroundColor = '#fff';
-    data_id.style.color = 'black';
     api_id.style.backgroundColor = '#4285f4';
     api_id.style.color = 'whitesmoke';
+    
+    if (changeModeBtn.textContent == 'Change Dark') {
+        data_id.style.backgroundColor = '#fff';
+        data_id.style.color = 'black';
+    } else {
+        data_id.style.backgroundColor = '#202124';
+        data_id.style.color = 'whitesmoke';
+    }
+
+
 })
 
 
