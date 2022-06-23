@@ -454,7 +454,7 @@ a.footerLinks {
 }
 
 .gTMtLb {
-    display: block;
+    display: none;
     position: absolute;
     right: 12rem;
     bottom: 15rem;
@@ -488,6 +488,8 @@ a.footerLinks {
 }
 
 #dropup {
+    width: 150px;
+    padding-left: 1rem;
     text-decoration: none;
     list-style: none;
     display: block;
@@ -500,4 +502,5 @@ a.footerLinks {
 #dropup li:hover {
    color: whitesmoke;
    background-color: #9aa0a6;
+   cursor: pointer;
 }
