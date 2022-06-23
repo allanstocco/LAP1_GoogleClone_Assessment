@@ -7,8 +7,8 @@ const searchResultArea = document.querySelector('#searchresultsarea');
 
 async function fetchData(query) {
 
-    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${query}`);
-    // let response = await fetch('')
+    // let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${query}`);
+    let response = await fetch(`http://0.0.0.0:3000/${query}`);
     let data = await response.json();
     console.log(data.items);
     appendResults(data.items);
