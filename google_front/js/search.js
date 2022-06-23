@@ -7,9 +7,11 @@ const searchResultArea = document.querySelector('#searchresultsarea');
 
 async function fetchData(query) {
 
-    let response = await fetch(`http://0.0.0.0:3000/${query}`);
+    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${query}`);
+    // let response = await fetch('')
     let data = await response.json();
-    appendResults(data);
+    console.log(data.items);
+    appendResults(data.items);
     
 }
 
@@ -30,12 +32,12 @@ function appendResult(itemData){
     container.setAttribute('class', 'searchresult');
     // container.setAttribute('id', `searchresult-${parseInt(itemData[0] + 1)}`)
 
-    link.textContent = itemData.url;
-    link.href = itemData.url;
-    text.textContent = itemData.info;
+    link.textContent = itemData.link;
+    link.href = itemData.link;
+    text.textContent = itemData.htmlSnippet;
 
-    headerLink.href = itemData.url;
-    headerLink.textContent = itemData.header;
+    headerLink.href = itemData.link;
+    headerLink.textContent = itemData.title;
     header.appendChild(headerLink);
 
 
