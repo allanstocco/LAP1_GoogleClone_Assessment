@@ -8,7 +8,7 @@ const api_id = document.querySelector('#api_id');
 const changeModeBtn = document.querySelector('#changeMode');
 
 
-
+// Event Listener that take care of toogling and adjusting styles in settings box
 data_id.addEventListener('click', (e) => {
     database_request.style.display = 'block';
     api_request.style.display = 'none';
@@ -24,6 +24,7 @@ data_id.addEventListener('click', (e) => {
     }
 })
 
+// Event Listener that take care of toogling and adjusting styles in settings box
 api_id.addEventListener('click', (e) => {
     api_request.style.display = 'block';
     database_request.style.display = 'none';
@@ -39,6 +40,8 @@ api_id.addEventListener('click', (e) => {
     }
 })
 
+
+// Event Listener that call when setting box get clicked adjusting styles.
 changeModeBtn.addEventListener('click', () => {
     if (changeModeBtn.textContent == 'Change Dark') {
         data_id.style.backgroundColor = '#fff';
@@ -54,6 +57,7 @@ changeModeBtn.addEventListener('click', () => {
 })
 
 
+// Event Listener Function that get random results from Local Database
 randomSearch.addEventListener('click', async (e) => {
     e.preventDefault();
     console.log(e)

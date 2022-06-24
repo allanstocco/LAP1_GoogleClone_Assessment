@@ -1,3 +1,6 @@
+
+// THIS FILE IS FOR STYLES FUNCTIONALITY PURPOSES ONLY
+
 const themeColor = document.querySelector('body');
 const allDivs = document.getElementsByTagName('a');
 const changeMode = document.querySelector('#changeMode');
@@ -14,15 +17,18 @@ const settingsLinkDropUp = document.querySelector('#settingDropUp');
 const settingsDropUp = document.querySelector('.gTMtLb')
 
 
+// OPENING SETTING BOX
 settingsLinkDropUp.addEventListener('click', (e) => {
 
     settingsDropUp.style.display = 'block'
 
 })
 
+
+// SHUTTING SETTING BOX WHEN CLICKING ON ELEMENTS BELOW
 document.addEventListener('click', (e) => {
     if (e.path[0].className == 'lower-mid' || e.path[0].className == 'logo') {
-    settingsDropUp.style.display = 'none'
+        settingsDropUp.style.display = 'none'
     }
 })
 
@@ -31,7 +37,8 @@ document.addEventListener('click', (e) => {
 
 
 
-
+// IM FEELING LUCKY BTN 
+// RANDOM STRINGS ON AN ARRAY AND RENDERING INNERTEXT BTN WITH CHOSEN
 randomButton.addEventListener('mouseover', (e) => {
 
     const textContentBtn = ["I'm Feeling Lucky", "I'm Feeling Playful", "I'm Feeling Doodley", "I'm Feeling Adventurous", "I'm Feeling Generous", "I'm Feeling Artistic", "I'm Feeling Hungry"]
@@ -42,15 +49,13 @@ randomButton.addEventListener('mouseover', (e) => {
 
 })
 
+// GET VALUE BACK AS SOON MOUSE GETS OUT BTN
 randomButton.addEventListener('mouseout', (e) => {
     randomButton.value = "I'm Feeling Lucky"
 })
 
 
-
-
-
-
+// DARK MODE
 changeMode.addEventListener('click', (e) => {
 
     if (changeMode.textContent == 'Change Dark') {
@@ -70,6 +75,7 @@ changeMode.addEventListener('click', (e) => {
         settingBox.style.background = '#202124'
         svg.setAttribute('fill', 'white')
 
+        // GETTING ALL p TAGS 
         for (let i = 0; i < allDivs.length; i++) {
             allDivs[i].style.color = 'whitesmoke'
         }
@@ -91,11 +97,11 @@ changeMode.addEventListener('click', (e) => {
         settingBox.style.background = '#fff'
         svg.setAttribute('fill', 'black')
 
+        // GETTING ALL p TAGS 
         for (let i = 0; i < allDivs.length; i++) {
             allDivs[i].style.color = '#70757a'
         }
     }
-
 })
 
 
