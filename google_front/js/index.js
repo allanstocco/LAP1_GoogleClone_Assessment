@@ -14,14 +14,20 @@ const api_id = document.querySelector('#api_id');
 const changeModeBtn = document.querySelector('#changeMode');
 
 
+// Event Listener that take care of toogling and adjusting styles in settings box
 data_id.addEventListener('click', (e) => {
     database_request.style.display = 'block';
     api_request.style.display = 'none';
     data_id.style.backgroundColor = '#4285f4';
     data_id.style.color = 'whitesmoke';
 
-    data_id.setAttribute('class','on');
-    api_id.setAttribute('class','off');
+    if (changeModeBtn.textContent == 'Change Dark') {
+        api_id.style.backgroundColor = '#fff';
+        api_id.style.color = 'black';
+    } else {
+        api_id.style.backgroundColor = '#202124';
+        api_id.style.color = 'whitesmoke';
+    }
 })
 
 // Event Listener that take care of toogling and adjusting styles in settings box
@@ -30,9 +36,30 @@ api_id.addEventListener('click', (e) => {
     database_request.style.display = 'none';
     api_id.style.backgroundColor = '#4285f4';
     api_id.style.color = 'whitesmoke';
-    
-    data_id.setAttribute('class','off');
-    api_id.setAttribute('class','on');
+
+    if (changeModeBtn.textContent == 'Change Dark') {
+        data_id.style.backgroundColor = '#fff';
+        data_id.style.color = 'black';
+    } else {
+        data_id.style.backgroundColor = '#202124';
+        data_id.style.color = 'whitesmoke';
+    }
+})
+
+
+// Event Listener that call when setting box get clicked adjusting styles.
+changeModeBtn.addEventListener('click', () => {
+    if (changeModeBtn.textContent == 'Change Dark') {
+        data_id.style.backgroundColor = '#fff';
+        data_id.style.color = 'black';
+        api_id.style.backgroundColor = '#fff';
+        api_id.style.color = 'black';
+    } else {
+        data_id.style.backgroundColor = '#202124';
+        data_id.style.color = 'whitesmoke';
+        api_id.style.backgroundColor = '#202124';
+        api_id.style.color = 'whitesmoke';
+    }
 })
 
 
