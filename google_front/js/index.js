@@ -6,6 +6,7 @@ const api_query = urlParams.get('api_q')
 
 const googleSearch = document.querySelector('.search-button');
 const randomSearch = document.querySelector('#random-button');
+const randomSearch2 = document.querySelector('.random-button2');
 const submitQuery = document.querySelector('#submit_query')
 const database_request = document.querySelector('#database_request');
 const api_request = document.querySelector('#api_request');
@@ -66,16 +67,19 @@ changeModeBtn.addEventListener('click', () => {
 // Event Listener Function that get random results from Local Database
 randomSearch.addEventListener('click', async (e) => {
 
-    console.log(api_request.style.display);
-    if(api_request.style.display == 'block'){
-    console.log(api_query);
-    } else {
     e.preventDefault();
     console.log(e)
     let response = await fetch('http://0.0.0.0:3000/search/random');
     let data = await response.json();
     let url = data.url;
     window.location.href = url;
-}
+
+})
+
+
+randomSearch2.addEventListener('click', async (e) => {
+
+    console.log(e);
+
 })
 
