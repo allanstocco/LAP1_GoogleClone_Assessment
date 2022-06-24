@@ -30,3 +30,7 @@
 - All links link-out to their respective Google pages.
 - Download Moesif Chrome extension to resolve cors policy errors so that related searches show on the search.html page.
 
+### Misc.
+
+- API key and cx variables are tied to v.dev.dependencies@gmail.com. 
+

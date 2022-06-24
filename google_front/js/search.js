@@ -1,4 +1,7 @@
 
+//see documentation for how to populate
+const apikey = "AIzaSyByx4bhUMsKPpBmvBSASQMr1QN5OfgMNns";
+const cx = "f4a0a13d4493c2097";
 // Getting query submit parameter
 const queryString = window.location.search;
 
@@ -27,7 +30,7 @@ async function fetchData(query) {
 // FETCH API DATA, GOOGLE API
 async function fetchAPI(api_query) {
 
-    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${api_query}`);
+    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${apikey}&cx=${cx}&q=${api_query}`);
     let data = await response.json();
 
     appendApiResults(data.items);

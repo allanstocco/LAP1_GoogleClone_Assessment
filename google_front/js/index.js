@@ -1,8 +1,11 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const query = urlParams.get('q')
+const query = urlParams.get('q');
 
 const api_query = urlParams.get('api_q')
+
+const apikey = "AIzaSyByx4bhUMsKPpBmvBSASQMr1QN5OfgMNns";
+const cx = "f4a0a13d4493c2097";
 
 const googleSearch = document.querySelector('.search-button');
 const randomSearch = document.querySelector('#random-button');
@@ -76,7 +79,7 @@ randomSearch.addEventListener('click', async (e) => {
 
 })
 
-
+// Event Listener Function that get random results from API
 randomSearch2.addEventListener('click', async (e) => {
 
     e.preventDefault();
@@ -84,7 +87,7 @@ randomSearch2.addEventListener('click', async (e) => {
     let arr = ['cats','dogs','phones','sheep','coding','finances','wizards','creeks','relationships','holidays','banking','rap','dancing']
     let query = arr[Math.floor(Math.random() * arr.length)];
     
-    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${query}`)
+    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${apikey}&cx=${cx}&q=${query}`)
     let data = await response.json();
     let url = data.items[0].link;
     window.location.href = url;
