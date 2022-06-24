@@ -79,7 +79,14 @@ randomSearch.addEventListener('click', async (e) => {
 
 randomSearch2.addEventListener('click', async (e) => {
 
+    e.preventDefault();
     console.log(e);
-
+    let arr = ['cats','dogs','phones','sheep','coding','finances','wizards','creeks','relationships','holidays','banking','rap','dancing']
+    let query = arr[Math.floor(Math.random() * arr.length)];
+    
+    let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC527TEPWQJWEGg7bffb2zsvIbWFnxFRDw&cx=abf820f0c36deb757&q=${query}`)
+    let data = await response.json();
+    let url = data.items[0].link;
+    window.location.href = url;
 })
 
