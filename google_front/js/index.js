@@ -1,3 +1,9 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const query = urlParams.get('q')
+
+const api_query = urlParams.get('api_q')
+
 const googleSearch = document.querySelector('.search-button');
 const randomSearch = document.querySelector('#random-button');
 const submitQuery = document.querySelector('#submit_query')
@@ -35,9 +41,9 @@ api_id.addEventListener('click', (e) => {
 
 randomSearch.addEventListener('click', async (e) => {
 
-    console.log(api_id.getElementsByClassName('on').length);
-    if(api_id.getElementsByClassName('on').length > 0){
-    console.log("testing")
+    console.log(api_request.style.display);
+    if(api_request.style.display == 'block'){
+    console.log(api_query);
     } else {
     e.preventDefault();
     console.log(e)
