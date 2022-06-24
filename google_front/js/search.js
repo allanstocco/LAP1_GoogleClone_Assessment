@@ -114,7 +114,10 @@ function appendResult(itemData) {
     let errorHeader = "Could not find any results for this search"
     if (headerLink.textContent == errorHeader) {
         let pagebar = document.querySelector('.pagebar');
-        let relatedsearches = document.querySelector('.relatedsearches')
+        let relatedsearches = document.querySelector('.relatedsearches');
+        let footer = document.querySelector('#footer');
+        footer.style.position = "fixed";
+        footer.style.bottom = "0px";
         headerLink.href = "../google_front/error.html"
         pagebar.remove();
         relatedsearches.remove();
@@ -122,15 +125,42 @@ function appendResult(itemData) {
 }
 
 
-// async function relatedSearches(query) {
+async function relatedSearches(query) {
 //     let relatedSearches = document.querySelector('#relatedsearches-header');
 //     relatedSearches.textContent = `Search results related to ${query}`;
 
-//     let response = await fetch(`https://api.bing.com/osjson.aspx?query=${query}`);
-//     let data = await response.json();
-//     console.log(data[1]);
+    const options = { 
+        method: 'GET',
+        body: null,
+        headers: {
+        "Content-Type": "text/plain"
+    }
+    };
+    console.log(query)
+    let response = await fetch(`https://api.bing.com/osjson.aspx?query=${query}`, options);
+    let data = await response.json();
+    let arr = await data[1];
+    arr.splice(arr.length - 4, 4);
+    console.log(arr);
 
-// }
+
+    let leftRelatedSearches = document.querySelector('.relatedleft');
+    let rightRelatedSearches = document.querySelector('.relatedright');
+
+    for(i=0; i <arr.length; i++){
+        console.log(i);
+        if(i<4){
+            let li = document.createElement('li');
+            li.textContent = arr[i];
+            leftRelatedSearches.appendChild(li);
+        } else {
+            let li = document.createElement('li');
+            li.textContent = arr[i];
+            rightRelatedSearches.appendChild(li);
+        }
+    }
+
+}
 
 
 // CONDITIONAL THAT VERIFIES WHAT FORM THE QUERY COMES AND CALL THE APPROPRIATE FUNCTION
