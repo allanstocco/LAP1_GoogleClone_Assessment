@@ -442,10 +442,10 @@ html, body {
     font-weight: bold;
 }
 
-#footer {
+/* #footer {
     position: fixed;
     bottom: 0;
-}
+} */
 
 #optionsmenu1 li {
     cursor: pointer;

@@ -36,7 +36,7 @@ api_id.addEventListener('click', (e) => {
 randomSearch.addEventListener('click', async (e) => {
 
     console.log(api_id.getElementsByClassName('on').length);
-if(api_id.getElementsByClassName('on').length > 0){
+    if(api_id.getElementsByClassName('on').length > 0){
     console.log("testing")
     } else {
     e.preventDefault();
