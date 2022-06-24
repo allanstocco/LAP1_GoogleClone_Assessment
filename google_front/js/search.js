@@ -21,7 +21,7 @@ async function fetchData(query) {
     let data = await response.json();
 
     appendResults(data);
-    //relatedSearches(query);
+    relatedSearches(query);
 }
 
 // FETCH API DATA, GOOGLE API
@@ -31,7 +31,7 @@ async function fetchAPI(api_query) {
     let data = await response.json();
 
     appendApiResults(data.items);
-    //relatedSearches(api_query);
+    relatedSearches(api_query);
 }
 
 
