@@ -126,8 +126,8 @@ function appendResult(itemData) {
 
 
 async function relatedSearches(query) {
-//     let relatedSearches = document.querySelector('#relatedsearches-header');
-//     relatedSearches.textContent = `Search results related to ${query}`;
+    let relatedSearches = document.querySelector('#relatedsearches-header');
+    relatedSearches.textContent = `Search results related to ${query}`;
 
     const options = { 
         method: 'GET',
