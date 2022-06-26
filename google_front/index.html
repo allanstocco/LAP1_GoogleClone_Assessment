@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/pngegg.png">
+    <script defer src="./js/index.js"></script>
+
+</head>
+
+<body>
+    <div class="upper">
+        <div class="upleft">
+            <a class="links" href="https://about.google/">About</a>
+            <a class="links" href="https://store.google.com/">Store</a>
+            <div class="upmiddle">
+                <div class="mid">
+                    <div class="midright">
+                        <div class="upright">
+                            <a class="textright" href="g_img.html"></a>
+                        </div>
+                        <a href="https://mail.google.com/mail/u/0/" class="links">Gmail</a>
+                        <a href="https://www.google.co.uk/imghp?hl=en&ogbl" class="links">Images</a>
+                        <div class="upright">
+                            <a aria-label="Google apps" href="https://www.google.co.uk/intl/en/about/products"
+                                aria-expanded="false" role="button" tabindex="0">
+                                <svg id="svg" focusable="false" viewBox="0 0 24 24" width="30px" heigth="30px">
+                                    <path
+                                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="logo_a">
+                <a style="text-decoration: none;" href="">
+                    <img id="logo_google" class="img" src="images/googlelogo_color_272x92dp.png" alt="Google"
+                        height="92" width="272">
+                </a>
+                <div class="buttom_logo"></div>
+            </div>
+        </div>
+        <div id="database_request" class="field">
+            <form action="./search.html">
+                <div style="display: block;">
+                    <div class="field_A">
+                        <div class="field_Aa">
+                            <div class="field_item">
+                                <div class="field_itemA">
+                                    <div class="field_itemAa">
+                                        <div>
+                                            <img src="images/lupa.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field_itemB">
+                                    <img style="position: relative; left: 510px;" src="images/mic3.png" alt="">
+                                </div>
+                                <div clas="field_B">
+                                    <div class="field_Bb"></div>
+                                    <input id="query" class="field_Bc" name="q" type="text" maxlenght="1000"
+                                        placeholder="Search from Local Database">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field_mid" style="display: none;"></div>
+                    <div class="field_but" style="display: block;">
+                        <center>
+                            <input id="submit_query" class="search-button" value="Google Search"
+                                aria-label="Google Search" type="submit">
+                            <input name="btnI" class="random-button" id="random-button" value="I'm Feeling Lucky"
+                                aria-label="I'm Feeling Lucky" type="button">
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="api_request" style="display: none;" class="field">
+            <form action="./search.html">
+                <div style="display: block;">
+                    <div class="field_A">
+                        <div class="field_Aa">
+                            <div class="field_item">
+                                <div class="field_itemA">
+                                    <div class="field_itemAa">
+                                        <div>
+                                            <img src="images/lupa.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field_itemB">
+                                    <img style="position: relative; left: 510px;" src="images/mic3.png" alt="">
+                                </div>
+                                <div clas="field_B">
+                                    <div class="field_Bb"></div>
+                                    <input id="query" class="field_Bc" name="api_q" type="text" maxlenght="1000"
+                                        placeholder="Search from API!">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field_mid" style="display: none;"></div>
+                    <div class="field_but" style="display: block;">
+                        <center>
+                            <input id="submit_query" class="search-button" value="Google Search"
+                                aria-label="Google Search" type="submit">
+                            <input name="btnI" class="random-button random-button2" id="random-button" value="I'm Feeling Lucky"
+                                aria-label="I'm Feeling Lucky" type="button">
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="lower-mid">
+            <div class="lower-midA">
+                <div class="lower-textmid"></div>
+            </div>
+        </div>
+        <div class="upperFooter">
+            <div class="location">United Kingdom</div>
+            <div class="footerBox">
+                <div class="box-A footerBox">
+                    <a class="footerLinks" href="https://ads.google.com/">Advertising</a>
+                    <a class="footerLinks" href="https://smallbusiness.withgoogle.com/intl/en_uk/#!/">Business</a>
+                    <a class="footerLinks" href="https://www.google.com/search/howsearchworks/?fg=1">How Search
+                        works</a>
+                </div>
+                <div class="box-B footerBox">
+                    <a class="footerLinks"
+                        href="https://sustainability.google/commitments-europe/?utm_source=googlehpfooter&amp;utm_medium=housepromos&amp;utm_campaign=bottom-footer&amp;utm_content="
+                        ping="/url?sa=t&amp;rct=j&amp;source=webhp&amp;url=https://sustainability.google/commitments-europe/%3Futm_source%3Dgooglehpfooter%26utm_medium%3Dhousepromos%26utm_campaign%3Dbottom-footer%26utm_content%3D&amp;ved=0ahUKEwik1JiY-ZbyAhVDlFwKHfJZC5cQiM8HCBQ">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
+                            class="box-imgB" alt="" data-iml="1628065664710" data-atf="1" data-frt="0"><span
+                            class="">Allan and Vincent Developers</span></a>
+                </div>
+                <div class="box-C footerBox">
+                    <a class="footerLinks" href="https://policies.google.com/privacy?hl=en-GB&fg=1">Privacy</a>
+                    <a class="footerLinks" href="https://policies.google.com/terms?hl=en-GB&fg=1">Terms</a>
+                    <a id="settingDropUp" class="footerLinks" href="#">Settings</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="gTMtLb">
+            <div class="sAKBe B8Kd8d EwsJzb">
+                <div class="menu">
+                    <ul id="dropup">
+                        <li>Search settings</li>
+                        <li>Advanced search</li>
+                        <li>Your data in Search</li>
+                        <li id="data_id">Search Local Data</li>
+                        <li id="api_id">Search Google API</li>
+                        <li>Send feedback</li>
+                        <li id="changeMode">Change Dark</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./js/styles.js"></script>
+</body>
+
+</html>

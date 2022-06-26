@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Search</title>
+    <link rel="shortcut icon" type="image/ico" href="" />
+    <link rel="stylesheet" type="text/css" href="./css/search.css" />
+    <link rel="icon" type="image/x-icon" href="./images/pngegg.png">
+    <script defer src="./js/search.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="topbar">
+            <a href="./index.html">
+                <img id="searchbarimage" src="./images/google_adv_search_icon.png" />
+            </a>
+            <form action="./search.html">
+                <div id="searchbar" type="text">
+                    <input id="searchbartext"  name="q" type="text" maxlenght="1000"/>
+                    <button id="search-button">
+                        <svg focusable="false" xmlns="" viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+
+
+            <div id="profileimage">
+                <svg id="svg" focusable="false" viewBox="0 0 24 24" width="30px" heigth="30px">
+                    <path
+                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div id="optionsbar">
+            <ul id="optionsmenu1">
+                <li id="optionsmenuactive">All</li>
+                <li><a href="../google_front/index.html">News</a></li>
+                <li><a href="../google_front/index.html">Videos</a></li>
+                <li><a href="../google_front/index.html">Images</a></li>
+                <li><a href="../google_front/index.html">Maps</a></li>
+                <li><a href="../google_front/index.html">More</a></li>
+            </ul>
+
+            <ul id="optionsmenu2">
+                <li><a href="../google_front/index.html">Settings</a></li>
+                <li>Tools</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="searchresultsarea">
+        <p id="searchresultsnumber">About 155,000 results (0.56 seconds) </p>
+    </div>
+
+    <div class="relatedsearches">
+        <h3 id="relatedsearches-header"></h3>
+        <div class="relatedlists">
+            <ul class="relatedleft">
+            </ul>
+            <ul class="relatedright">
+            </ul>
+        </div>
+    </div>
+
+    <div class="pagebar">
+        <ul class="pagelist">
+            <li class="pagelistprevious">Previous</li>
+            <li class="pagelistfirst">1</li>
+            <li class="pagelistnumber">2</li>
+            <li class="pagelistnumber">3</li>
+            <li class="pagelistnumber">4</li>
+            <li class="pagelistnumber">5</li>
+            <li class="pagelistnumber">6</li>
+            <li class="pagelistnumber">7</li>
+            <li class="pagelistnumber">8</li>
+            <li class="pagelistnumber">9</li>
+            <li class="pagelistnumber">10</li>
+            <li class="pagelistnext">Next</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <div id="footerlocation">
+            <p>Somewhere, Moon </p>
+            <p> - From your phone (Location History) - Use precise location - Learn more</p>
+        </div>
+
+        <ul id="footermenu">
+            <li>Help</li>
+            <li>Send feedback</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+        </ul>
+    </div>
+</body>
+
+</html>
